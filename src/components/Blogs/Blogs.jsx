@@ -8,21 +8,24 @@ import Img3 from '../../assets/blogs/blog-3.jpg'
 const BlogData = [
     {
         title: "How to choose perfect Smartwatch",
-        subtitle: "kghjkgj hjnkjhk kjhkj jthkm kjhk,ktjkrtjyn,tkjyitrnf.jnkktyjmnkh,kjktjktj fgjfgkjtkjjgtr",
+        subtitle: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
         published: "Jan 20, 2024 by Dilshad",
-        image:Img1,
+        image: Img1,
+        aosDelay:'0',
     },
     {
         title: "How to choose perfect gadget",
-        subtitle: "kghjkgj hjnkjhk kjhkj jthkm kjhk,ktjkrtjyn,tkjyitrnf.jnkktyjmnkh,kjktjktj fgjfgkjtkjjgtr",
+        subtitle: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layou",
         published: "Jan 22, 2024 by Satya",
         image: Img2,
+        aosDelay: '200',
     },
     {
         title: "How to choose perfect VR headset",
-        subtitle: "kghjkgj hjnkjhk kjhkj jthkm kjhk,ktjkrtjyn,tkjyitrnf.jnkktyjmnkh,kjktjktj fgjfgkjtkjjgtr",
+        subtitle: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum",
         published: "Jan 21, 2024 by John",
         image: Img3,
+        aosDelay: '400',
     },
 ]
 const Blogs = () => {
@@ -36,7 +39,10 @@ const Blogs = () => {
               <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 gap-y-8 sm:gap-4 md:gap-7'>
                   {
                       BlogData.map((data) => (
-                          <div key={data.title} className='bg-white dark:bg-gray-900'>
+                          <div
+                              data-aos="fade-up"
+                              data-aos-delay={data.aosDelay}
+                              key={data.title} className='bg-white dark:bg-gray-900'>
                               {/* image section */}
                               <div className='overflow-hidden rounded-2xl mb-2 '>
                                   <img src={data.image} alt=" " className='w-full h-[220px] object-cover rounded-2xl hover:scale-105 duration-500' />
