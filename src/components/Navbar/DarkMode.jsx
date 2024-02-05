@@ -1,6 +1,6 @@
 import React from 'react'
-import Darkpng from '../assets/website/dark-mode-button.png'
-import Lightpng from '../assets/website/light-mode-button.png'
+import Darkpng from '../../assets/website/dark-mode-button.png'
+import Lightpng from '../../assets/website/light-mode-button.png'
 
 const DarkMode = () => {
  
